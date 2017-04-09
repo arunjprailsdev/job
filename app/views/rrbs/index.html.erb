@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rrbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Postdate</th>
+      <th>Postname</th>
+      <th>Description</th>
+      <th>Totalpost</th>
+      <th>Vacancydetails</th>
+      <th>Agelimit</th>
+      <th>Educationalqualification</th>
+      <th>Selectionprocess</th>
+      <th>Applicationfee</th>
+      <th>Apply</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rrbs.each do |rrb| %>
+      <tr>
+        <td><%= rrb.PostDate %></td>
+        <td><%= rrb.PostName %></td>
+        <td><%= rrb.Description %></td>
+        <td><%= rrb.TotalPost %></td>
+        <td><%= rrb.VacancyDetails %></td>
+        <td><%= rrb.AgeLimit %></td>
+        <td><%= rrb.EducationalQualification %></td>
+        <td><%= rrb.SelectionProcess %></td>
+        <td><%= rrb.ApplicationFee %></td>
+        <td><%= rrb.Apply %></td>
+        <td><%= link_to 'Show', rrb %></td>
+        <td><%= link_to 'Edit', edit_rrb_path(rrb) %></td>
+        <td><%= link_to 'Destroy', rrb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rrb', new_rrb_path %>

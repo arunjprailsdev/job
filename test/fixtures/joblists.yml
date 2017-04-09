@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  PostDate: 2017-04-07
+  JobTitle: MyString
+  Qualification: MyString
+  LastDate: 2017-04-07
+  MoreInfo: MyString
+
+two:
+  PostDate: 2017-04-07
+  JobTitle: MyString
+  Qualification: MyString
+  LastDate: 2017-04-07
+  MoreInfo: MyString

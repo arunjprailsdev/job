@@ -1,0 +1,27 @@
+<%= form_for(tnpsc) do |f| %>
+  <% if tnpsc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tnpsc.errors.count, "error") %> prohibited this tnpsc from being saved:</h2>
+
+      <ul>
+      <% tnpsc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Post %>
+    <%= f.text_field :Post %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Qualification %>
+    <%= f.text_field :Qualification %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

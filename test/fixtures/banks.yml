@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  postdate: 2017-04-09
+  post: MyString
+  education: MyString
+  lastdate: 2017-04-09
+  more: MyString
+
+two:
+  postdate: 2017-04-09
+  post: MyString
+  education: MyString
+  lastdate: 2017-04-09
+  more: MyString

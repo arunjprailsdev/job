@@ -1,0 +1,67 @@
+<%= form_for(rrb) do |f| %>
+  <% if rrb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rrb.errors.count, "error") %> prohibited this rrb from being saved:</h2>
+
+      <ul>
+      <% rrb.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :PostDate %>
+    <%= f.text_field :PostDate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PostName %>
+    <%= f.text_field :PostName %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Description %>
+    <%= f.text_area :Description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :TotalPost %>
+    <%= f.number_field :TotalPost %>
+  </div>
+
+  <div class="field">
+    <%= f.label :VacancyDetails %>
+    <%= f.text_area :VacancyDetails %>
+  </div>
+
+  <div class="field">
+    <%= f.label :AgeLimit %>
+    <%= f.text_area :AgeLimit %>
+  </div>
+
+  <div class="field">
+    <%= f.label :EducationalQualification %>
+    <%= f.text_field :EducationalQualification %>
+  </div>
+
+  <div class="field">
+    <%= f.label :SelectionProcess %>
+    <%= f.text_field :SelectionProcess %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ApplicationFee %>
+    <%= f.text_field :ApplicationFee %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Apply %>
+    <%= f.text_area :Apply %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

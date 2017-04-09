@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Postdate:</strong>
+  <%= @joblist.PostDate %>
+</p>
+
+<p>
+  <strong>Jobtitle:</strong>
+  <%= @joblist.JobTitle %>
+</p>
+
+<p>
+  <strong>Qualification:</strong>
+  <%= @joblist.Qualification %>
+</p>
+
+<p>
+  <strong>Lastdate:</strong>
+  <%= @joblist.LastDate %>
+</p>
+
+<p>
+  <strong>Moreinfo:</strong>
+  <%= @joblist.MoreInfo %>
+</p>
+
+<%= link_to 'Edit', edit_joblist_path(@joblist) %> |
+<%= link_to 'Back', joblists_path %>

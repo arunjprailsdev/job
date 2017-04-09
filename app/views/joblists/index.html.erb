@@ -1,0 +1,38 @@
+<h1>Joblists</h1>
+<div class="container-fluid">
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Postdate</th>
+      <th>Jobtitle</th>
+      <th>Qualification</th>
+      <th>Lastdate</th>
+      <th>Moreinfo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @joblists.each do |joblist| %>
+      <tr>
+        <td><%= joblist.PostDate %></td>
+        <td><%= joblist.JobTitle %></td>
+        <td><%= joblist.Qualification %></td>
+        <td><%= joblist.LastDate %></td>
+        <td><%= joblist.MoreInfo %></td>
+        <% if user_signed_in? %>
+        <td><%= link_to 'Show', joblist %></td>
+        <td><%= link_to 'Edit', edit_joblist_path(joblist) %></td>
+        <td><%= link_to 'Destroy', joblist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+<% if user_signed_in? %>
+
+<%= link_to 'New Joblist', new_joblist_path %>
+
+<% end %>

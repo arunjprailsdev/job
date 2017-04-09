@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Upscs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Postdate</th>
+      <th>Post</th>
+      <th>Education</th>
+      <th>Lastdate</th>
+      <th>More</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @upscs.each do |upsc| %>
+      <tr>
+        <td><%= upsc.postdate %></td>
+        <td><%= upsc.post %></td>
+        <td><%= upsc.education %></td>
+        <td><%= upsc.lastdate %></td>
+        <td><%= upsc.more %></td>
+        <td><%= link_to 'Show', upsc %></td>
+        <td><%= link_to 'Edit', edit_upsc_path(upsc) %></td>
+        <td><%= link_to 'Destroy', upsc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Upsc', new_upsc_path %>

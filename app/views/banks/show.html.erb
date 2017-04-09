@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Postdate:</strong>
+  <%= @bank.postdate %>
+</p>
+
+<p>
+  <strong>Post:</strong>
+  <%= @bank.post %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @bank.education %>
+</p>
+
+<p>
+  <strong>Lastdate:</strong>
+  <%= @bank.lastdate %>
+</p>
+
+<p>
+  <strong>More:</strong>
+  <%= @bank.more %>
+</p>
+
+<%= link_to 'Edit', edit_bank_path(@bank) %> |
+<%= link_to 'Back', banks_path %>

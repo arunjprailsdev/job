@@ -18,7 +18,7 @@
         <td><%= joblist.JobTitle %></td>
         <td><%= joblist.Qualification %></td>
         <td><%= joblist.LastDate %></td>
-        <td><%= joblist.MoreInfo %></td>
+        <td><%= link_to 'Show', joblist %></td>
         <% if user_signed_in? %>
         <td><%= link_to 'Show', joblist %></td>
         <td><%= link_to 'Edit', edit_joblist_path(joblist) %></td>
